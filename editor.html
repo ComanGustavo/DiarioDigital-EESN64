@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Editor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+
+<body>
+    <header class="dashboard-header"><strong>Diario Digital Escolar</strong><a class="access" href="docente.html">←
+            Publicaciones</a></header>
+    <main class="editor-wrap">
+        <div class="editor-heading">
+            <p class="eyebrow">REDACCIÓN</p>
+            <h1 id="editorTitle">Nueva publicación</h1>
+        </div>
+        <form id="postForm">
+            <div class="form-grid"><label>Título principal<input name="title" required
+                        maxlength="120"></label><label>Subtítulo<input name="subtitle"
+                        maxlength="180"></label><label>Autor<input name="author" required></label><label>Curso<input
+                        name="course" placeholder="Ej.: 3.º A"></label><label>Fecha<input name="date" type="date"
+                        required></label><label>Categoría<select name="category" required></select></label></div>
+            <label>Imagen principal<input name="image" type="file" accept="image/*"></label>
+            <div class="form-grid image-info"><label>Título de la imagen<input name="imageTitle"></label><label>Texto
+                    alternativo<input name="imageAlt"></label><label>Autor de la fotografía<input
+                        name="photoAuthor"></label></div><label>Descripción / pie de foto<input
+                    name="caption"></label><label>Contenido<div class="editor-toolbar"><button type="button"
+                        data-command="bold"><b>N</b></button><button type="button"
+                        data-command="italic"><i>C</i></button><button type="button"
+                        data-command="underline"><u>S</u></button><button type="button"
+                        data-command="insertUnorderedList">• Lista</button><button type="button"
+                        data-command="formatBlock" data-value="blockquote">Cita</button></div>
+                <div id="content" class="rich-editor" contenteditable="true"
+                    data-placeholder="Escribí la noticia aquí…"></div>
+            </label>
+            <div class="form-grid"><label>Conclusión<textarea name="conclusion"></textarea></label><label>Bibliografía
+                    (opcional)<textarea name="bibliography"></textarea></label></div>
+            <div class="editor-actions"><button type="button" class="secondary" id="saveDraft">Guardar
+                    borrador</button><label class="checkbox"><input type="checkbox" name="featured"> Destacar en
+                    portada</label><button>Publicar</button></div>
+        </form>
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+
+</html>

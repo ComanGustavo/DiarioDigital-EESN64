@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Diario Digital Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header"><a class="brand" href="index.html"><span
+                class="seal">EES<br>64</span><span><small>E.E.S. N.º 64 · Quitilipi</small><strong>Diario Digital
+                    Escolar</strong></span></a>
+        <div class="header-right"><time id="today"></time><a class="access" href="login.html">Acceso docente</a></div>
+    </header>
+    <nav class="nav"><a href="index.html">Inicio</a><a href="#destacadas">Destacadas</a><a href="#agenda">Agenda</a><a
+            href="#galeria">Galería</a><select id="categoryFilter" aria-label="Filtrar por categoría">
+            <option value="">Todas las secciones</option>
+        </select></nav>
+    <main class="container">
+        <section id="featured" class="hero"></section>
+        <section class="section" id="destacadas">
+            <div class="section-title">
+                <h2>Noticias destacadas</h2><input id="search" placeholder="Buscar noticias…">
+            </div>
+            <div id="highlights" class="card-grid"></div>
+        </section>
+        <section class="section two-col">
+            <div>
+                <h2>Últimas noticias</h2>
+                <div id="recent" class="feed"></div>
+            </div>
+            <aside class="sidebar">
+                <div class="panel">
+                    <h3>Editorial</h3>
+                    <div id="editorial"></div>
+                </div>
+                <div class="panel" id="agenda">
+                    <h3>Agenda escolar</h3>
+                    <div id="events"></div>
+                </div>
+                <div class="panel">
+                    <h3>Efemérides</h3>
+                    <p id="ephemeris"></p>
+                </div>
+            </aside>
+        </section>
+        <section class="section" id="galeria">
+            <h2>Galería escolar</h2>
+            <div id="gallery" class="gallery"></div>
+        </section>
+    </main>
+    <footer>Diario Digital Escolar · E.E.S. N.º 64 “Combatientes Quitilipenses de Malvinas”</footer>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

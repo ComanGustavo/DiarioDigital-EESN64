@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Administración</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header class="dashboard-header"><strong>Diario Digital Escolar</strong><span id="welcome"></span><button
+            class="link-button" data-logout>Cerrar sesión</button></header>
+    <main class="dashboard">
+        <aside><a class="active" href="admin.html">Resumen</a><a href="docente.html">Publicaciones</a><a
+                href="editor.html">+ Nueva publicación</a><a href="index.html">Ver diario público</a></aside>
+        <section>
+            <h1>Panel de administración</h1>
+            <div id="stats" class="stats"></div>
+            <div class="dashboard-grid">
+                <article class="panel">
+                    <h2>Docentes</h2>
+                    <form id="teacherForm" class="inline-form"><input name="name" placeholder="Nombre y apellido"
+                            required><input name="user" placeholder="Usuario" required><button>Agregar</button></form>
+                    <div id="teachers"></div>
+                </article>
+                <article class="panel">
+                    <h2>Categorías</h2>
+                    <form id="categoryForm" class="inline-form"><input name="category" placeholder="Nueva categoría"
+                            required><button>Agregar</button></form>
+                    <div id="categories" class="chips"></div>
+                </article>
+                <article class="panel wide">
+                    <h2>Publicaciones eliminadas</h2>
+                    <div id="trash"></div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

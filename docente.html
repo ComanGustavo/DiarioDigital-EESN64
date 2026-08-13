@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mis publicaciones</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <header class="dashboard-header"><strong>Diario Digital Escolar</strong><span id="welcome"></span><button
+            class="link-button" data-logout>Cerrar sesión</button></header>
+    <main class="dashboard">
+        <aside><a href="docente.html" class="active">Publicaciones</a><a href="editor.html">+ Nueva publicación</a><a
+                href="index.html">Ver diario público</a></aside>
+        <section>
+            <div class="page-heading">
+                <div>
+                    <h1>Publicaciones</h1>
+                    <p>Creá, editá y organizá el contenido del diario.</p>
+                </div><a class="button" href="editor.html">+ Nueva publicación</a>
+            </div>
+            <div class="toolbar"><input id="searchPosts" placeholder="Buscar por título o autor"><select
+                    id="filterCategory">
+                    <option value="">Todas las categorías</option>
+                </select></div>
+            <div id="postList" class="manage-list"></div>
+        </section>
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
